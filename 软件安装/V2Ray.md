@@ -37,8 +37,8 @@
 防火墙
 
 ``` shell
-firewall-cmd --zone=public --add-port=23/tcp --permanent
-firewall-cmd --zone=public --remove-port=8890/tcp --permanent
+firewall-cmd --zone=public --add-port=8080/tcp --permanent
+firewall-cmd --zone=public --remove-port=8080/tcp --permanent
 firewall-cmd --reload
 firewall-cmd --list-ports
 ```
