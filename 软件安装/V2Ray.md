@@ -10,9 +10,16 @@
    cat /etc/v2ray/config.json
    ```
 
+   3. 启动服务
    
-
-  
+      ``` shell
+      systemctl enable v2ray
+      systemctl start v2ray
+      systemctl restart v2ray
+      
+      ```
+   
+      
 
 ## V2Ray客户端
 
@@ -37,7 +44,7 @@
 防火墙
 
 ``` shell
-firewall-cmd --zone=public --add-port=8080/tcp --permanent
+firewall-cmd --zone=public --add-port=8080/udp --permanent
 firewall-cmd --zone=public --remove-port=8080/tcp --permanent
 firewall-cmd --reload
 firewall-cmd --list-ports
